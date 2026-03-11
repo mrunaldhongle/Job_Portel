@@ -1,0 +1,35 @@
+{
+  "name": "job-portal",
+  "version": "1.0.0",
+  "description": "Full-stack Job Portal Web Application using MERN stack",
+  "author": "Your Name",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:backend && npm run build:frontend",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run preview",
+    "lint:frontend": "cd frontend && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "keywords": [
+    "job-portal",
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express"
+  ]
+}
